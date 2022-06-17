@@ -17,6 +17,8 @@ class Player {
   //     hand: this.hand
   //   }
   // }
+  // Test commit
+  console.log('test')
 }
 // console.log(`This is objectFrom() ${test.objectFrom()}`)
 
