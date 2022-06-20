@@ -9,16 +9,6 @@ class Player {
   description() {
     return `${this.name}: ${this.score}`;
   }
-
-  // objectFrom() {
-  //   return {
-  //     name: this.name,
-  //     score: this.score,
-  //     hand: this.hand
-  //   }
-  // }
-  // Test commit
-  console.log('test')
 }
 // console.log(`This is objectFrom() ${test.objectFrom()}`)
 
@@ -62,8 +52,6 @@ class Deck {
     }
     // return this.deck;
   }
-
-
   // console.log(this.deck);
   // shuffles 52 card deck - input new deck, output shuffled deck
   // shuffleDeck() {
@@ -121,7 +109,6 @@ class Game {
         p2Score ++;
       };
           // console.log(`Winner of Round ${i+1}: ${roundWinner}`);
-
         //Log Scores Each Round
       console.log(`
       ${roundWinner} won round ${i+1}!

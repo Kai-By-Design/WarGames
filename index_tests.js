@@ -19,36 +19,37 @@ describe('MyFunctions', function() {
     });
   })
 
+  //Progress Test - Currently Unresolved
     // it('generate two players with 3 properties - name: string, score: number, hand: []', function () {
     //   expect(function() {
     //     let makeNewPlayers =
     //     newplayers(5, 5);
     //   }).to.throw(Error);
     // })
-  describe('#gameplay', function(){
-    it('play game - be more detailed', function(){
-      let game = new Game();
-      game.assignPlayers();
-      game.dealDeck();
-      game.gamePlay();
+  // describe('#gameplay', function(){
+  //   it('play game - be more detailed', function(){
+  //     let game = new Game();
+  //     game.assignPlayers();
+  //     // assignPlayers () {
+  //       let player_1 = 'Ted';
+  //       let player_2 = 'Jenny';
+  //       this.players = [new Player(player_1), new Player(player_2)];
+  //     // };
 
-      expect()
-    });
-  })
 
+  //     game.dealDeck();
+  //     game.gamePlay();
+
+
+
+  //     expect(game.players.length).to.equal(2);
+  //   });
+  // })
 
   describe('#CreatePLayers', function() {
-    it('generates ONE new players with 3 properties - name: string, score: number, hand: []', function() {
+    it('generates ONE new player with 3 properties - name: string, score: number, hand: []', function() {
       const players = new Player ('Ted');
-      // const testPlayer = new Player('Ted');
 
-      // class Player {
-      //   constructor (name) {
-      //     this.name = name;
-      //     this.score = 0;
-      //     this.hand = [];
-      //   }
-      // }
       expect(players).to.be.a('object');
       expect(players.name).to.equal("Ted");
       expect(players.score).to.be.a('number');
@@ -56,9 +57,34 @@ describe('MyFunctions', function() {
       expect(players.hand).to.be.a('array');
       expect(players.hand.length).to.equal(0);
     });
-
   })
+
+  describe('#assignPlayers', function() {
+    it('generates 2 new players with 3 properties - name: string, score: number, hand: []', function() {
+      // const players = new Player ('Ted');
+        let player_1 = 'Ted';
+        let player_2 = 'Jenny';
+        const players = [new Player(player_1), new Player(player_2)];
+
+      expect(players).to.be.a('array');
+      expect(players[0].name).to.equal("Ted");
+      expect(players[0].score).to.be.a('number');
+      expect(players[0].score).to.equal(0);
+      expect(players[0].hand).to.be.a('array');
+      expect(players[0].hand.length).to.equal(0);
+
+      expect(players).to.be.a('array');
+      expect(players[1].name).to.equal("Jenny");
+      expect(players[1].score).to.be.a('number');
+      expect(players[1].score).to.equal(0);
+      expect(players[1].hand).to.be.a('array');
+      expect(players[1].hand.length).to.equal(0);
+    });
+  })
+
 })
+
+
 
 // var expect = require('chai').expect
 //   , foo = 'bar'
